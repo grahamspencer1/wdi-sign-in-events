@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 
   hideModal.addEventListener('click', function() {
-    hideModal.style.display = 'none';
+    displayModal.style.display = 'none';
   });
 
 });
