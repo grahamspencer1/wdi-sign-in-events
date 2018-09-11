@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var logOn = document.querySelector('.signin');
   var displayModal = document.querySelector('.modal');
   var hideModal = document.querySelector('.close');
-  var addError = document.querySelector('.submit');
+  var submitButton = document.querySelector('.submit');
   var username = document.querySelector('#user');
   var password = document.querySelector('#pass');
 
@@ -15,9 +15,17 @@ document.addEventListener('DOMContentLoaded', function(){
     displayModal.style.display = 'none';
   });
 
-  addError.addEventListener('click', function() {
+  submitButton.addEventListener('click', function() {
     username.classList.add('error');
     password.classList.add('error');
+  });
+
+  username.addEventListener('click', function() {
+    username.classList.remove('error');
+  });
+
+  password.addEventListener('click', function() {
+    password.classList.remove('error');
   });
 
 });
